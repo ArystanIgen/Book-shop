@@ -1,0 +1,17 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="{% url 'auth:login'  %}" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}{% bootstrap_form form %}
+        <button  name="submit">
+          Log in
+        </button>
+    </form>
+</body>
+</html>
